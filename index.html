@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi galería de imágenes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      background-image: url('fondo.jpg'); /* 👈 Imagen de fondo */
+      background-size: cover;             /* Que cubra toda la pantalla */
+      background-position: center;
+      background-attachment: fixed;       /* Fija al hacer scroll */
+      color: #222;
+    }
+
+    h1 {
+      margin-top: 30px;
+      color: white;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+    }
+
+    .galeria {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 15px;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.2);
+      width: 340px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .info {
+      text-align: left;
+      padding: 15px;
+    }
+
+    .info h3 {
+      margin-bottom: 8px;
+      color: #2c3e50;
+    }
+
+    .info p {
+      margin: 3px 0;
+      font-size: 14px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mi galería de imágenes</h1>
+
+  <div class="galeria">
+
+    <div class="card">
+      <img src="imagen1.jpg" alt="Plano estructural">
+      <div class="info">
+        <h3>Proyecto: Edificio Central</h3>
+        <p><strong>Ubicación:</strong> Palermo, Buenos Aires</p>
+        <p><strong>Superficie:</strong> 4.200 m²</p>
+        <p><strong>Año:</strong> 2023</p>
+        <p><strong>Descripción:</strong> Desarrollo estructural y eléctrico del edificio administrativo. Diseño optimizado para iluminación natural y ventilación cruzada.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="imagen2.jpg" alt="Render 3D">
+      <div class="info">
+        <h3>Proyecto: Vivienda Sustentable</h3>
+        <p><strong>Ubicación:</strong> Villa Allende, Córdoba</p>
+        <p><strong>Superficie:</strong> 280 m²</p>
+        <p><strong>Año:</strong> 2024</p>
+        <p><strong>Descripción:</strong> Render 3D del diseño arquitectónico con enfoque ecológico. Incluye techos verdes, paneles solares y recolección de aguas pluviales.</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
